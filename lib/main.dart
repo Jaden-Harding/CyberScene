@@ -1,3 +1,4 @@
+import 'package:cyber_scene/screens/crytography_screen.dart';
 import 'package:cyber_scene/screens/landing_screen.dart';
 import 'package:cyber_scene/screens/game_choice_screen.dart';
 import 'package:flutter/material.dart';
@@ -17,6 +18,7 @@ class MyApp extends StatelessWidget {
       routes: {
         LandingScreen.id: (context) => const LandingScreen(),
         GameChoiceScreen.id: (context) => const GameChoiceScreen(),
+        CryptographyScreen.id: (context) => const CryptographyScreen(),
       },
     );
   }

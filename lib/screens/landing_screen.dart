@@ -16,17 +16,17 @@ class _LandingScreenState extends State<LandingScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: OutlinedButton (
-          onPressed: () {
-            Navigator.pushNamed(context, GameChoiceScreen.id);
-          },
-          child: Container(
-            decoration: const BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage('images/landing_background.jpg'),
-                fit: BoxFit.cover,
-              ),
+        child: Container(
+          decoration: const BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage('images/landing_background.jpg'),
+              fit: BoxFit.cover,
             ),
+          ),
+          child: OutlinedButton(
+            onPressed: () {
+              Navigator.pushNamed(context, GameChoiceScreen.id);
+            },
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: <Widget>[
@@ -35,15 +35,15 @@ class _LandingScreenState extends State<LandingScreen> {
                   child: Center(
                     child: Text(
                       'CyberScene',
-                      style: GoogleFonts.blackOpsOne(
-                        fontWeight: FontWeight.w600,
+                      style: GoogleFonts.bungeeHairline(
+                        fontWeight: FontWeight.w900,
                         color: Colors.white,
                         fontSize: 65,
                         shadows: [
                           const Shadow(
-                            blurRadius: 20.0,
-                            color: Color.fromARGB(255, 8, 241, 241),
-                            offset: Offset(3, 3),
+                            blurRadius: 2.0,
+                            color: Color.fromARGB(255, 3, 170, 162),
+                            offset: Offset(2, 2),
                           ),
                         ],
                       ),
@@ -56,7 +56,7 @@ class _LandingScreenState extends State<LandingScreen> {
                 SizedBox(
                   width: 250,
                   child: DefaultTextStyle(
-                    style: GoogleFonts.mouseMemoirs(
+                    style: GoogleFonts.poiretOne(
                       fontSize: 35,
                       color: Colors.white,
                     ),
