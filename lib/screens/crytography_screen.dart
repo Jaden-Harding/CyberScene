@@ -46,30 +46,97 @@ class _CryptographyScreenState extends State<CryptographyScreen> {
             fit: BoxFit.cover,
           ),
         ),
-        child: Padding(
-          padding: const EdgeInsets.only(top: 75),
+        child: Container(
+          margin: const EdgeInsets.only(top: 90),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Center(
                 child: Container(
-                  color:
-                      const Color.fromARGB(255, 207, 207, 207).withOpacity(0.2),
-                  width: 400,
-                  height: 200,
-                  child: const Text(
-                    "Cryptography",
-                    style: TextStyle(color: Colors.white),
+                  decoration: BoxDecoration(
+                    borderRadius: const BorderRadius.all(
+                      Radius.circular(15),
+                    ),
+                    color: const Color.fromARGB(255, 207, 207, 207)
+                        .withOpacity(0.15),
+                  ),
+                  padding: const EdgeInsets.all(15),
+                  width: 380,
+                  child: Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(bottom: 8),
+                        child: Align(
+                          alignment: Alignment.topLeft,
+                          child: Text(
+                            'Cryptography',
+                            style: GoogleFonts.comicNeue(
+                              decoration: TextDecoration.underline,
+                              color: Colors.white,
+                              fontSize: 28,
+                            ),
+                          ),
+                        ),
+                      ),
+                      Text(
+                        'the practice of techniques for secure communication, by means of encryption and decryption, often using ciphers.',
+                        style: GoogleFonts.comicNeue(
+                          color: Colors.white,
+                          fontSize: 20,
+                        ),
+                      )
+                    ],
                   ),
                 ),
               ),
-              OutlinedButton(
-                onPressed: () {},
-                child: const Text(
-                  'Easy',
-                  style: TextStyle(color: Colors.white),
+              Container(
+                margin: const EdgeInsets.only(top: 50),
+                width: 200,
+                height: 55,
+                child: FloatingActionButton.extended(
+                  backgroundColor: const Color.fromARGB(255, 3, 170, 162),
+                  onPressed: () {},
+                  label: Text(
+                    'Easy',
+                    style: GoogleFonts.comicNeue(
+                        color: Colors.white,
+                        fontSize: 35,
+                        fontWeight: FontWeight.w700),
+                  ),
                 ),
-              )
+              ),
+              Container(
+                margin: const EdgeInsets.only(top: 50),
+                width: 200,
+                height: 55,
+                child: FloatingActionButton.extended(
+                  backgroundColor: const Color.fromARGB(255, 3, 170, 162),
+                  onPressed: () {},
+                  label: Text(
+                    'Medium',
+                    style: GoogleFonts.comicNeue(
+                        color: Colors.white,
+                        fontSize: 35,
+                        fontWeight: FontWeight.w700),
+                  ),
+                ),
+              ),
+              Container(
+                margin: const EdgeInsets.only(top: 50),
+                width: 200,
+                height: 55,
+                child: FloatingActionButton.extended(
+                  backgroundColor: const Color.fromARGB(255, 3, 170, 162),
+                  onPressed: () {},
+                  label: Text(
+                    'Hard',
+                    style: GoogleFonts.comicNeue(
+                        color: Colors.white,
+                        fontSize: 35,
+                        fontWeight: FontWeight.w700),
+                  ),
+                ),
+              ),
             ],
           ),
         ),

@@ -51,44 +51,35 @@ class GameChoiceScreen extends StatelessWidget {
               onPressed: () {
                 Navigator.pushNamed(context, CryptographyScreen.id);
               },
-              child: Padding(
-                padding: const EdgeInsets.only(
-                    bottom: 20, top: 20, right: 50, left: 50),
-                child: Container(
-                  height: 100,
-                  width: 100,
-                  color: const Color.fromARGB(255, 30, 131, 172),
-                  child: const Center(
-                    child: Text(
-                      'Cryptography',
-                      style: TextStyle(color: Colors.white),
-                    ),
+              child: Container(
+                margin: const EdgeInsets.only(bottom: 20, top: 20, right: 50, left: 50),
+                height: 100,
+                width: 100,
+                color: const Color.fromARGB(255, 30, 131, 172),
+                child: const Center(
+                  child: Text(
+                    'Cryptography',
+                    style: TextStyle(color: Colors.white),
                   ),
                 ),
               ),
             ),
             OutlinedButton(
               onPressed: () {},
-              child: Padding(
-                padding: const EdgeInsets.only(
-                    bottom: 20, top: 20, right: 50, left: 50),
-                child: Container(
-                  height: 100,
-                  width: 100,
-                  color: const Color.fromARGB(255, 30, 131, 172),
-                ),
+              child: Container(
+                margin: const EdgeInsets.only(bottom: 20, top: 20, right: 50, left: 50),
+                height: 100,
+                width: 100,
+                color: const Color.fromARGB(255, 30, 131, 172),
               ),
             ),
             OutlinedButton(
               onPressed: () {},
-              child: Padding(
-                padding: const EdgeInsets.only(
-                    bottom: 20, top: 20, right: 50, left: 50),
-                child: Container(
-                  height: 100,
-                  width: 100,
-                  color: const Color.fromARGB(255, 30, 131, 172),
-                ),
+              child: Container(
+                margin: const EdgeInsets.only(bottom: 20, top: 20, right: 50, left: 50),
+                height: 100,
+                width: 100,
+                color: const Color.fromARGB(255, 30, 131, 172),
               ),
             ),
           ],
