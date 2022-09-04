@@ -13,7 +13,7 @@ class GameChoiceScreen extends StatelessWidget {
       body: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('images/landing_background.jpg'),
+            image: AssetImage('assets/images/landing_background.jpg'),
             fit: BoxFit.cover,
           ),
         ),
@@ -21,65 +21,82 @@ class GameChoiceScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             AppBar(
-              actions: [
-                IconButton(
-                  onPressed: () {},
-                  icon: const Icon(Icons.info),
-                ),
-              ],
               automaticallyImplyLeading: false,
-              title: Text(
-                'CyberScene',
-                style: GoogleFonts.bungeeHairline(
-                  fontWeight: FontWeight.w900,
-                  color: Colors.white,
-                  fontSize: 25,
-                  shadows: [
-                    const Shadow(
-                      blurRadius: 2.0,
-                      color: Color.fromARGB(255, 3, 170, 162),
-                      offset: Offset(2, 2),
+              title: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.asset(
+                    'assets/images/Logo.png',
+                    height: 35,
+                    width: 35,
+                  ),
+                  Container(
+                    margin: const EdgeInsets.only(left: 10),
+                    child: const Text(
+                      'CyberScene',
+                      style: TextStyle(
+                        fontFamily: 'BungeeHarline-Regular',
+                        fontWeight: FontWeight.w900,
+                        color: Colors.white,
+                        fontSize: 25,
+                        shadows: [
+                           Shadow(
+                            blurRadius: 2.0,
+                            color: Color.fromARGB(255, 3, 170, 162),
+                            offset: Offset(2, 2),
+                          ),
+                        ],
+                      ),
                     ),
-                  ],
-                ),
+                  ),
+                ],
               ),
               centerTitle: true,
               backgroundColor: Colors.transparent,
               elevation: 0,
             ),
-            OutlinedButton(
-              onPressed: () {
-                Navigator.pushNamed(context, CryptographyScreen.id);
-              },
-              child: Container(
-                margin: const EdgeInsets.only(bottom: 20, top: 20, right: 50, left: 50),
-                height: 100,
-                width: 100,
-                color: const Color.fromARGB(255, 30, 131, 172),
-                child: const Center(
-                  child: Text(
-                    'Cryptography',
-                    style: TextStyle(color: Colors.white),
+            Expanded(
+              child: OutlinedButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, CryptographyScreen.id);
+                },
+                child: Container(
+                  margin: const EdgeInsets.only(
+                      bottom: 20, top: 20, right: 50, left: 50),
+                  height: 180,
+                  width: 180,
+                  color: const Color.fromARGB(255, 3, 170, 162),
+                  child: const Center(
+                    child: Text(
+                      'Cryptography',
+                      style: TextStyle(color: Colors.white),
+                    ),
                   ),
                 ),
               ),
             ),
-            OutlinedButton(
-              onPressed: () {},
-              child: Container(
-                margin: const EdgeInsets.only(bottom: 20, top: 20, right: 50, left: 50),
-                height: 100,
-                width: 100,
-                color: const Color.fromARGB(255, 30, 131, 172),
+            Expanded(
+              child: OutlinedButton(
+                onPressed: () {},
+                child: Container(
+                  margin: const EdgeInsets.only(
+                      bottom: 20, top: 20, right: 50, left: 50),
+                  height: 180,
+                  width: 180,
+                  color: const Color.fromARGB(255, 3, 170, 162),
+                ),
               ),
             ),
-            OutlinedButton(
-              onPressed: () {},
-              child: Container(
-                margin: const EdgeInsets.only(bottom: 20, top: 20, right: 50, left: 50),
-                height: 100,
-                width: 100,
-                color: const Color.fromARGB(255, 30, 131, 172),
+            Expanded(
+              child: OutlinedButton(
+                onPressed: () {},
+                child: Container(
+                  margin: const EdgeInsets.only(
+                      bottom: 20, top: 20, right: 50, left: 50),
+                  height: 180,
+                  width: 180,
+                  color: const Color.fromARGB(255, 3, 170, 162),
+                ),
               ),
             ),
           ],

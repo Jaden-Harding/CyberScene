@@ -16,21 +16,38 @@ class _CryptographyScreenState extends State<CryptographyScreen> {
       extendBodyBehindAppBar: true,
       appBar: AppBar(
         leading: IconButton(
-          icon: const Icon(Icons.arrow_left_outlined,
-              color: Color.fromARGB(255, 3, 170, 162)),
+          icon: const Icon(
+            Icons.keyboard_return_outlined,
+          ),
           onPressed: () => Navigator.of(context).pop(),
         ),
-        title: Text(
-          'CyberScene',
-          style: GoogleFonts.bungeeHairline(
-            fontWeight: FontWeight.w900,
-            color: Colors.white,
-            fontSize: 25,
-            shadows: [
-              const Shadow(
-                blurRadius: 2.0,
-                color: Color.fromARGB(255, 3, 170, 162),
-                offset: Offset(2, 2),
+        title: Container(
+          margin: const EdgeInsets.only(left: 20),
+          child: Row(
+            children: [
+              Image.asset(
+                'assets/images/Logo.png',
+                height: 35,
+                width: 35,
+              ),
+              Container(
+                margin: const EdgeInsets.only(left: 10),
+                child: const Text(
+                  'CyberScene',
+                  style: TextStyle(
+                    fontFamily: 'BungeeHarline-Regular',
+                    fontWeight: FontWeight.w900,
+                    color: Colors.white,
+                    fontSize: 25,
+                    shadows: [
+                      Shadow(
+                        blurRadius: 2.0,
+                        color: Color.fromARGB(255, 3, 170, 162),
+                        offset: Offset(2, 2),
+                      ),
+                    ],
+                  ),
+                ),
               ),
             ],
           ),
@@ -42,12 +59,12 @@ class _CryptographyScreenState extends State<CryptographyScreen> {
       body: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('images/landing_background.jpg'),
+            image: AssetImage('assets/images/landing_background.jpg'),
             fit: BoxFit.cover,
           ),
         ),
         child: Container(
-          margin: const EdgeInsets.only(top: 90),
+          margin: const EdgeInsets.only(top: 100),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
@@ -63,14 +80,15 @@ class _CryptographyScreenState extends State<CryptographyScreen> {
                   padding: const EdgeInsets.all(15),
                   width: 380,
                   child: Column(
-                    children: [
+                    children: const [
                       Padding(
-                        padding: const EdgeInsets.only(bottom: 8),
+                        padding: EdgeInsets.only(bottom: 8),
                         child: Align(
                           alignment: Alignment.topLeft,
                           child: Text(
                             'Cryptography',
-                            style: GoogleFonts.comicNeue(
+                            style: TextStyle(
+                              fontFamily: 'ComicNeue-Regular',
                               decoration: TextDecoration.underline,
                               color: Colors.white,
                               fontSize: 28,
@@ -80,7 +98,8 @@ class _CryptographyScreenState extends State<CryptographyScreen> {
                       ),
                       Text(
                         'the practice of techniques for secure communication, by means of encryption and decryption, often using ciphers.',
-                        style: GoogleFonts.comicNeue(
+                        style: TextStyle(
+                          fontFamily: 'ComicNeue-Regular',
                           color: Colors.white,
                           fontSize: 20,
                         ),
@@ -96,9 +115,10 @@ class _CryptographyScreenState extends State<CryptographyScreen> {
                 child: FloatingActionButton.extended(
                   backgroundColor: const Color.fromARGB(255, 3, 170, 162),
                   onPressed: () {},
-                  label: Text(
+                  label: const Text(
                     'Easy',
-                    style: GoogleFonts.comicNeue(
+                    style: TextStyle(
+                        fontFamily: 'ComicNeue-Regular',
                         color: Colors.white,
                         fontSize: 35,
                         fontWeight: FontWeight.w700),
@@ -112,9 +132,10 @@ class _CryptographyScreenState extends State<CryptographyScreen> {
                 child: FloatingActionButton.extended(
                   backgroundColor: const Color.fromARGB(255, 3, 170, 162),
                   onPressed: () {},
-                  label: Text(
+                  label: const Text(
                     'Medium',
-                    style: GoogleFonts.comicNeue(
+                    style: TextStyle(
+                        fontFamily: 'ComicNeue-Regular',
                         color: Colors.white,
                         fontSize: 35,
                         fontWeight: FontWeight.w700),
@@ -128,9 +149,10 @@ class _CryptographyScreenState extends State<CryptographyScreen> {
                 child: FloatingActionButton.extended(
                   backgroundColor: const Color.fromARGB(255, 3, 170, 162),
                   onPressed: () {},
-                  label: Text(
+                  label: const Text(
                     'Hard',
-                    style: GoogleFonts.comicNeue(
+                    style: TextStyle(
+                        fontFamily: 'ComicNeue-Regular',
                         color: Colors.white,
                         fontSize: 35,
                         fontWeight: FontWeight.w700),

@@ -1,6 +1,4 @@
 import 'dart:async';
-import 'dart:ffi';
-
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -57,7 +55,7 @@ class _LandingScreenState extends State<LandingScreen>
       body: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('images/landing_background.jpg'),
+            image: AssetImage('assets/images/landing_background.jpg'),
             fit: BoxFit.cover,
           ),
         ),
@@ -69,17 +67,18 @@ class _LandingScreenState extends State<LandingScreen>
               : null,
           child: Column(
             children: <Widget>[
-              Padding(
-                padding: const EdgeInsets.only(top: 65),
+              const Padding(
+                padding: EdgeInsets.only(top: 65),
                 child: Center(
                   child: Text(
                     'CyberScene',
-                    style: GoogleFonts.bungeeHairline(
+                    style: TextStyle(
+                      fontFamily: 'BungeeHarline-Regular',
                       fontWeight: FontWeight.w900,
                       color: Colors.white,
-                      fontSize: 55,
+                      fontSize: 45,
                       shadows: [
-                        const Shadow(
+                        Shadow(
                           blurRadius: 2.0,
                           color: Color.fromARGB(255, 3, 170, 162),
                           offset: Offset(2, 2),
@@ -97,7 +96,8 @@ class _LandingScreenState extends State<LandingScreen>
                 child: SizedBox(
                   width: 250,
                   child: DefaultTextStyle(
-                    style: GoogleFonts.comicNeue(
+                    style: const TextStyle(
+                      fontFamily: 'ComicNeue-Regular',
                       fontSize: 34,
                       color: Colors.white,
                     ),
