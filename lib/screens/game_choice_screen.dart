@@ -1,6 +1,5 @@
-import 'package:cyber_scene/screens/crytography_screen.dart';
+import 'package:cyber_scene/screens/cryptography_main_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class GameChoiceScreen extends StatelessWidget {
   static const String id = 'game_choice_screen';

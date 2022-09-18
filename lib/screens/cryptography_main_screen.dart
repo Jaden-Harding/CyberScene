@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:cyber_scene/screens/cryptography_info_screen.dart';
 
 class CryptographyScreen extends StatefulWidget {
   static const String id = 'cryptography_screen';
@@ -64,7 +64,7 @@ class _CryptographyScreenState extends State<CryptographyScreen> {
           ),
         ),
         child: Container(
-          margin: const EdgeInsets.only(top: 100),
+          margin: const EdgeInsets.only(top: 90),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
@@ -75,7 +75,7 @@ class _CryptographyScreenState extends State<CryptographyScreen> {
                       Radius.circular(15),
                     ),
                     color: const Color.fromARGB(255, 207, 207, 207)
-                        .withOpacity(0.15),
+                        .withOpacity(0.4),
                   ),
                   padding: const EdgeInsets.all(15),
                   width: 380,
@@ -88,10 +88,17 @@ class _CryptographyScreenState extends State<CryptographyScreen> {
                           child: Text(
                             'Cryptography',
                             style: TextStyle(
-                              fontFamily: 'ComicNeue-Regular',
+                              fontFamily: 'Roboto-Regular',
                               decoration: TextDecoration.underline,
-                              color: Colors.white,
+                              color: Color.fromARGB(255, 255, 255, 255),
                               fontSize: 28,
+                              shadows: [
+                                Shadow(
+                                  blurRadius: 1.0,
+                                  color: Color.fromARGB(255, 0, 0, 0),
+                                  offset: Offset(1, 2),
+                                ),
+                              ],
                             ),
                           ),
                         ),
@@ -99,9 +106,16 @@ class _CryptographyScreenState extends State<CryptographyScreen> {
                       Text(
                         'the practice of techniques for secure communication, by means of encryption and decryption, often using ciphers.',
                         style: TextStyle(
-                          fontFamily: 'ComicNeue-Regular',
+                          fontFamily: 'Roboto-Regular',
                           color: Colors.white,
                           fontSize: 20,
+                          shadows: [
+                            Shadow(
+                              blurRadius: 1.0,
+                              color: Color.fromARGB(255, 0, 0, 0),
+                              offset: Offset(1, 2),
+                            ),
+                          ],
                         ),
                       )
                     ],
@@ -114,14 +128,17 @@ class _CryptographyScreenState extends State<CryptographyScreen> {
                 height: 55,
                 child: FloatingActionButton.extended(
                   backgroundColor: const Color.fromARGB(255, 3, 170, 162),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, CryptographyInfoScreen.id);
+                  },
                   label: const Text(
                     'Easy',
                     style: TextStyle(
-                        fontFamily: 'ComicNeue-Regular',
-                        color: Colors.white,
-                        fontSize: 35,
-                        fontWeight: FontWeight.w700),
+                      fontFamily: 'ComicNeue-Regular',
+                      color: Colors.white,
+                      fontSize: 35,
+                      fontWeight: FontWeight.w700,
+                    ),
                   ),
                 ),
               ),

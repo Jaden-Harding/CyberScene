@@ -1,4 +1,7 @@
-import 'package:cyber_scene/screens/crytography_screen.dart';
+import 'package:cyber_scene/screens/cryptography_info_screen.dart';
+import 'package:cyber_scene/screens/cryptography_main_screen.dart';
+import 'package:cyber_scene/screens/cryptography_solve_screen.dart';
+import 'package:cyber_scene/screens/cryptography_test_screen.dart';
 import 'package:cyber_scene/screens/landing_screen.dart';
 import 'package:cyber_scene/screens/game_choice_screen.dart';
 import 'package:flutter/material.dart';
@@ -19,6 +22,9 @@ class MyApp extends StatelessWidget {
         LandingScreen.id: (context) => const LandingScreen(),
         GameChoiceScreen.id: (context) => const GameChoiceScreen(),
         CryptographyScreen.id: (context) => const CryptographyScreen(),
+        CryptographyInfoScreen.id: (context) => const CryptographyInfoScreen(),
+        CryptogtaphyTestScreen.id: (context) => const CryptogtaphyTestScreen(),
+        CryptographySolveScreen.id: (context) => const CryptographySolveScreen(),
       },
     );
   }

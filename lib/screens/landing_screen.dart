@@ -1,7 +1,6 @@
 import 'dart:async';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:cyber_scene/screens/game_choice_screen.dart';
 
 class LandingScreen extends StatefulWidget {
