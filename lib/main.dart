@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
         LandingScreen.id: (context) => const LandingScreen(),
         GameChoiceScreen.id: (context) => const GameChoiceScreen(),
         CryptographyScreen.id: (context) => const CryptographyScreen(),
-        CryptographyInfoScreen.id: (context) => const CryptographyInfoScreen(),
+        CryptographyInfoScreen.id: (context) => const CryptographyInfoScreen(cipher: '', content: '', image: '', title: '',),
         CryptogtaphyTestScreen.id: (context) => const CryptogtaphyTestScreen(),
         CryptographySolveScreen.id: (context) => const CryptographySolveScreen(),
       },

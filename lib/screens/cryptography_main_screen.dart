@@ -129,7 +129,15 @@ class _CryptographyScreenState extends State<CryptographyScreen> {
                 child: FloatingActionButton.extended(
                   backgroundColor: const Color.fromARGB(255, 3, 170, 162),
                   onPressed: () {
-                    Navigator.pushNamed(context, CryptographyInfoScreen.id);
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => const CryptographyInfoScreen(
+                            title: "Caesar Cipher",
+                            content: "is a type of substitution cipher in which each letter in the given text is replaced by a letter some fixed number of positions down the alphabet. For example, with a right shift of 3, A would be replaced by D, B would become E, and so on.",
+                            image: "assets/images/rightshift.png",
+                            cipher: "caesar"),
+                      ),
+                    );
                   },
                   label: const Text(
                     'Easy',
@@ -183,3 +191,12 @@ class _CryptographyScreenState extends State<CryptographyScreen> {
     );
   }
 }
+
+// CryptographyInfoScreen
+//                         // (
+//                         //         // title: 'Caesar Cipher',
+//                         //         // content: "sdf",
+//                         //         // image: "sdfsd",
+//                         //         // cipher: "asdas",
+//                         //         )
+//                             .id);
