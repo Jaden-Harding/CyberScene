@@ -13,7 +13,6 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -22,9 +21,20 @@ class MyApp extends StatelessWidget {
         LandingScreen.id: (context) => const LandingScreen(),
         GameChoiceScreen.id: (context) => const GameChoiceScreen(),
         CryptographyScreen.id: (context) => const CryptographyScreen(),
-        CryptographyInfoScreen.id: (context) => const CryptographyInfoScreen(cipher: '', content: '', image: '', title: '',),
-        CryptogtaphyTestScreen.id: (context) => const CryptogtaphyTestScreen(),
-        CryptographySolveScreen.id: (context) => const CryptographySolveScreen(),
+        CryptographyInfoScreen.id: (context) => const CryptographyInfoScreen(
+              cipher: '',
+              content: '',
+              image: '',
+              title: '',
+            ),
+        CryptogtaphyTestScreen.id: (context) => const CryptogtaphyTestScreen(
+              cipher: '',
+              title: '',
+            ),
+        CryptographySolveScreen.id: (context) => const CryptographySolveScreen(
+              cipher: '',
+              title: '',
+            ),
       },
     );
   }

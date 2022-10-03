@@ -50,99 +50,102 @@ class _LandingScreenState extends State<LandingScreen>
       afterLoad,
     );
 
-    return Scaffold(
-      body: Container(
-        decoration: const BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage('assets/images/landing_background.jpg'),
-            fit: BoxFit.cover,
+    return WillPopScope(
+      onWillPop: () async => false,
+      child: Scaffold(
+        body: Container(
+          decoration: const BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage('assets/images/landing_background.jpg'),
+              fit: BoxFit.cover,
+            ),
           ),
-        ),
-        child: OutlinedButton(
-          onPressed: readyIsVisible
-              ? () {
-                  Navigator.pushNamed(context, GameChoiceScreen.id);
-                }
-              : null,
-          child: Column(
-            children: <Widget>[
-              const Padding(
-                padding: EdgeInsets.only(top: 65),
-                child: Center(
-                  child: Text(
-                    'CyberScene',
-                    style: TextStyle(
-                      fontFamily: 'BungeeHarline-Regular',
-                      fontWeight: FontWeight.w900,
-                      color: Colors.white,
-                      fontSize: 45,
-                      shadows: [
-                        Shadow(
-                          blurRadius: 2.0,
-                          color: Color.fromARGB(255, 3, 170, 162),
-                          offset: Offset(2, 2),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-              const SizedBox(
-                height: 200.0,
-              ),
-              Visibility(
-                visible: readyIsVisible,
-                child: SizedBox(
-                  width: 250,
-                  child: DefaultTextStyle(
-                    style: const TextStyle(
-                      fontFamily: 'ComicNeue-Regular',
-                      fontSize: 34,
-                      color: Colors.white,
-                    ),
-                    child: Center(
-                      child: AnimatedTextKit(
-                        pause: const Duration(milliseconds: 50),
-                        repeatForever: true,
-                        animatedTexts: [
-                          FlickerAnimatedText(
-                            'Tap to Play...',
+          child: OutlinedButton(
+            onPressed: readyIsVisible
+                ? () {
+                    Navigator.pushNamed(context, GameChoiceScreen.id);
+                  }
+                : null,
+            child: Column(
+              children: <Widget>[
+                const Padding(
+                  padding: EdgeInsets.only(top: 65),
+                  child: Center(
+                    child: Text(
+                      'CyberScene',
+                      style: TextStyle(
+                        fontFamily: 'BungeeHarline-Regular',
+                        fontWeight: FontWeight.w900,
+                        color: Colors.white,
+                        fontSize: 45,
+                        shadows: [
+                          Shadow(
+                            blurRadius: 2.0,
+                            color: Color.fromARGB(255, 3, 170, 162),
+                            offset: Offset(2, 2),
                           ),
                         ],
-                        onTap: () {},
                       ),
                     ),
                   ),
                 ),
-              ),
-              Visibility(
-                visible: loadingIsVisible,
-                child: Expanded(
-                  child: Align(
-                    alignment: Alignment.bottomCenter,
-                    child: SizedBox(
-                      width: 300,
-                      height: 9,
-                      child: ClipRRect(
-                        borderRadius: const BorderRadius.all(
-                          Radius.circular(20),
+                const SizedBox(
+                  height: 200.0,
+                ),
+                Visibility(
+                  visible: readyIsVisible,
+                  child: SizedBox(
+                    width: 250,
+                    child: DefaultTextStyle(
+                      style: const TextStyle(
+                        fontFamily: 'ComicNeue-Regular',
+                        fontSize: 34,
+                        color: Colors.white,
+                      ),
+                      child: Center(
+                        child: AnimatedTextKit(
+                          pause: const Duration(milliseconds: 50),
+                          repeatForever: true,
+                          animatedTexts: [
+                            FlickerAnimatedText(
+                              'Tap to Play...',
+                            ),
+                          ],
+                          onTap: () {},
                         ),
-                        child: LinearProgressIndicator(
-                          value: progress,
-                          backgroundColor: Colors.grey[700],
-                          valueColor: const AlwaysStoppedAnimation<Color>(
-                            Color.fromARGB(255, 3, 170, 162),
+                      ),
+                    ),
+                  ),
+                ),
+                Visibility(
+                  visible: loadingIsVisible,
+                  child: Expanded(
+                    child: Align(
+                      alignment: Alignment.bottomCenter,
+                      child: SizedBox(
+                        width: 300,
+                        height: 9,
+                        child: ClipRRect(
+                          borderRadius: const BorderRadius.all(
+                            Radius.circular(20),
+                          ),
+                          child: LinearProgressIndicator(
+                            value: progress,
+                            backgroundColor: Colors.grey[700],
+                            valueColor: const AlwaysStoppedAnimation<Color>(
+                              Color.fromARGB(255, 3, 170, 162),
+                            ),
                           ),
                         ),
                       ),
                     ),
                   ),
                 ),
-              ),
-              const SizedBox(
-                height: 110,
-              ),
-            ],
+                const SizedBox(
+                  height: 110,
+                ),
+              ],
+            ),
           ),
         ),
       ),
