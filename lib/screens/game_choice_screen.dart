@@ -22,6 +22,30 @@ class GameChoiceScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               AppBar(
+                leading: IconButton(
+                  icon: const Icon(
+                    Icons.info_outline,
+                    size: 25,
+                  ),
+                  onPressed: () {
+                    showDialog(
+                          context: context,
+                          builder: (BuildContext context) {
+                            return AlertDialog(
+                              title: const Text("Info"),
+                              content: const Text("This serious game exists as an artefact for a research project. It is a proof of concept and currently only has one 'mini-game' which is meant to inform players in an interactive and competitive manner."),
+                              actions: [
+                                FlatButton(
+                                  onPressed: () {
+                                    Navigator.of(context).pop();
+                                  },
+                                  child: const Text('Close'),
+                                )
+                              ],
+                            );
+                          });
+                  },
+                ),
                 automaticallyImplyLeading: false,
                 title: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -32,7 +56,7 @@ class GameChoiceScreen extends StatelessWidget {
                       width: 35,
                     ),
                     Container(
-                      margin: const EdgeInsets.only(left: 10),
+                      margin: const EdgeInsets.only(left: 10, right: 50),
                       child: const Text(
                         'CyberScene',
                         style: TextStyle(
@@ -70,8 +94,8 @@ class GameChoiceScreen extends StatelessWidget {
                     ),
                     margin: const EdgeInsets.only(
                         bottom: 20, top: 20, right: 50, left: 50),
-                    height: 200,
-                    width: 200,
+                    height: 280,
+                    width: 300,
                     child: const Center(
                       child: Text(
                         'Cryptography',
@@ -79,29 +103,17 @@ class GameChoiceScreen extends StatelessWidget {
                           fontFamily: 'BungeeHarline-Regular',
                           fontWeight: FontWeight.w900,
                           color: Colors.white,
-                          fontSize: 22,
+                          fontSize: 27,
                           shadows: [
-                          Shadow(
-                            blurRadius: 2.0,
-                            color: Color.fromARGB(255, 0, 0, 0),
-                            offset: Offset(2, 2),
-                          ),
-                        ],
+                            Shadow(
+                              blurRadius: 2.0,
+                              color: Color.fromARGB(255, 0, 0, 0),
+                              offset: Offset(2, 2),
+                            ),
+                          ],
                         ),
                       ),
                     ),
-                  ),
-                ),
-              ),
-              Expanded(
-                child: OutlinedButton(
-                  onPressed: () {},
-                  child: Container(
-                    margin: const EdgeInsets.only(
-                        bottom: 20, top: 20, right: 50, left: 50),
-                    height: 200,
-                    width: 200,
-                    color: const Color.fromARGB(255, 3, 170, 162),
                   ),
                 ),
               ),
